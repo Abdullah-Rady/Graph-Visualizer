@@ -1,6 +1,6 @@
 # Graph Algorithms Visualizer
 
-#Graph Algorithms visualizer project which visualizes Different types of graph algorithms on a NxN Grid
+Graph Algorithms visualizer project which visualizes Different types of graph algorithms on a NxN Grid
 
 
 ### Path-finding algorithms
@@ -10,3 +10,5 @@
 ### Random Maze Generation Algorithms
 1. Prim's Algorithm
 1. Recursive Backtracker
+
+
