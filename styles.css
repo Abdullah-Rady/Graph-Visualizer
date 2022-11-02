@@ -1,0 +1,288 @@
+:root{
+    /* UI Colors */
+    --color-1: #262626;
+    --color-2: #EFBC05;
+    --color-3: #0A88B2;
+    --color-4: #40CEE3;
+    --color-5: #AF2D44;
+    /* Visualization colors */
+    --color-6: #13EBA2;
+    --color-6: #FFD400;
+    --color-7: #40CEE3;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: 0;
+    list-style: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+nav{
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    color: var(--color-3);
+    background-color: var(--color-1);
+}
+
+.logo{
+    font-size: 1rem;
+    height: 100%;
+    width: auto;
+}
+
+.logo-header{
+    color: #ffffff;  /* fallback for old browsers */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-options{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.nav-btn{
+    padding: 10px 15px;
+    margin-right: 20px;
+    background-color: var(--color-1);
+    color: var(--color-4);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: var(--color-4) solid 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.3);
+}
+
+.fa-solid{
+    margin-left: 5px;
+}
+
+.hide{
+    display: none;
+}
+
+.maze-list{
+    position: absolute;
+    width: 300px;
+    background-color: #FFF;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.05);
+    border-radius: 10px;
+    border-collapse: separate; 
+}
+
+.path-list{
+    position: absolute;
+    width: 300px;
+    background-color: #FFF;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.05);
+    border-radius: 10px;
+    border-collapse: separate; 
+}
+
+.dropdown-item{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-collapse: separate; 
+}
+
+.first{
+    border-radius:10px 10px 0px 0px ;
+}
+
+.last{
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+.visualize{
+    border: var(--color-5) solid 3px;
+    color: #AF2D44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.3);
+    margin-right: 24px;
+
+}
+
+.reset{
+    color: #AF2D44;
+    border: var(--color-5) solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.3);
+}
+
+.nav-item{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #EFBC05;
+    height: 100%;
+}
+
+
+
+.graph-container{
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graph{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.rows{
+    display: flex;
+    flex-direction: row;
+}
+
+.rows:first-of-type{
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.cells:first-of-type{
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+ 
+.cells{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+	border-right: 1px solid rgba(0,0,0,0.2);
+	background: white;
+}
+
+.cells:hover{
+    background-color: var(--color-1);
+}
+
+.node-search{
+    background-color: #4c8de2;
+    animation-name:search;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes search{
+
+
+    from{
+        background-color: #E3A24D;
+        border-radius: 50%;
+        transform: scale(.3);
+    }
+
+    to{
+        background-color: #4c8de2;
+        border-radius: 0%;
+        transform: scale(1);
+    }
+
+}
+
+.node-wall{
+    background-color:#1e2431;
+    border:0;
+    animation-name:wall;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes wall {
+    from {
+      transform:scale(.3);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  
+}
+
+.node-path{
+    background-color: #FFD400;
+    animation-name: path;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes path{
+
+
+    from{
+        background-color: #4c8de2;
+        border-radius: 50%;
+        transform: scale(.3);
+    }
+
+    to{
+        background-color: #FFD400;
+        border-radius: 0%;
+        transform: scale(1);
+    }
+
+}
+
+.play {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #E3A24D;
+    
+}
+
+.end {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #E3A24D;
+    
+}

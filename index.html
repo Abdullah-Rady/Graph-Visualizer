@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="grid.js"></script>
+    <script defer src="utils.js"></script>
+    <script defer src="recursiveBacktracker.js"></script>
+    <script defer src="randomizedPrime.js"></script>
+    <script defer src="nav.js"></script>
+    <!-- <script defer src="script.js"></script> -->
+    <script defer src="bfs.js"></script>
+    <script defer src="dfs.js"></script>
+    <title>Graph Visualizer</title>
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo">
+            <h1 class="logo-header">Graph Visualizer</h1>
+        </div>
+
+        <div class="navbar-options">
+
+            <div class="btn-group-path btn-grp">
+                <button class = 'nav-btn' id="path-grp-btn">
+                    Path Finding Algorithms
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+
+                <ul class="path-list hide">
+                    <li><a class="dropdown-item path-item first bfs">BFS</a></li>
+                    <li><a class="dropdown-item path-item last dfs">DFS</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="btn-group-maze btn-grp">
+                <button class = 'nav-btn' id="maze-grp-btn">
+                    Random Maze Generation Algorithms  
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+
+                <ul class="maze-list hide">
+                    <li><a class="dropdown-item maze-item first" value = "Recursive">Recursive Backtracker</a></li>
+                    <li><a class="dropdown-item maze-item last">Prim's Algorithm</a></li>
+
+                </ul>
+            </div>
+
+            <a class="visualize">Visualize</a>
+            <a class="reset">Reset</a>
+
+            <div class="nav-item">
+                <label class="" for="grid-size">  Node Size: </label>
+                <input name="grid-size" type="range" class="size-input" id="size-slider" value="28" min="19" max="90">
+            </div>
+
+
+
+        </div>
+    </nav>
+
+    <div class="graph-container">
+
+        <div class="graph">
+    
+        </div>
+
+    </div>
+
+</body>
+
+</html>
